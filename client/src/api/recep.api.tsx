@@ -7,6 +7,11 @@ export const getUsersRequest = async ()=>{
     
  }
 
+ export const getRecipeRequest = async ()=>{
+    return axios.get('localhost:4000/api/v1/recipes')
+    
+ }
+
 //  export const getUsersRequest = async ()=>{
 //     await axios.get('http://localhost:4000/api/v1/users')
 //  }
