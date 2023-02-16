@@ -4,18 +4,16 @@ import { getUsersRequest } from '../api/recep.api'
 import Layout from '../components/Layout'
 
 type Props = {
-  id:any;
+  _id?:any;
   username:string;
-  password:string;
-  email:string;
-  shopping_List:string
+
 }
 
 
 
 function Profile() {
 
-  const [user, setUsers] = useState<Props[]>  ([])
+  const [user, setUsers] = useState<Props[]> ([])
 
   useEffect(()=>{
 
@@ -35,11 +33,9 @@ function Profile() {
       {
           user.map(users => (
             <div>
-              <p>{users.id}</p>
+              <p>{users._id}</p>
               <h3>{users.username}</h3>
-              <p>{users.password}</p>
-              <p>{users.email}</p>
-              <p>{users.shopping_List}</p>
+            
          
             </div>
           ))
