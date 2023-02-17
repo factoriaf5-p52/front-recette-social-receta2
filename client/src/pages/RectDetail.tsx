@@ -1,14 +1,12 @@
-
-
 import { useEffect, useState } from 'react'
 import { getUsersRequest } from '../api/recep.api'
 import Layout from '../components/Layout'
 
 function RectDetail() {
-const [user, setUsers] = useState ()
+  const [user, setUsers] = useState()
 
-useEffect(()=>{
-console.log('users')
+  useEffect(() => {
+    console.log('users')
 
 
   }, [])

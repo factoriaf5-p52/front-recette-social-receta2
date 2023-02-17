@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-function Nofout() {
+function NoFound() {
   return (
     <div>
-        <Layout />
-      <h1>no fount</h1>
+      <Layout />
+      <h1>404 - No Found</h1>
     </div>
   )
 }
 
-export default Nofout
+export default NoFound
