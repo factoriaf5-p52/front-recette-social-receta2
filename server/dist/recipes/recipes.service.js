@@ -35,6 +35,11 @@ let RecipesService = class RecipesService {
             .populate("ingredients author comments.user", "-_id -__v -shopping_list -email -password")
             .exec();
     }
+    async findByName(title) {
+        return this.recipeModel
+            .find({ title: { $regex: `${title}` } })
+            .exec();
+    }
     async findOne2(id) {
         return this.recipeModel.findOne({ _id: id }).exec();
     }

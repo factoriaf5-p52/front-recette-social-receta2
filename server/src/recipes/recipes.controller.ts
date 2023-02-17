@@ -19,7 +19,7 @@ import { CreateCommentDto } from './dto/create-comment.dto';
 @Controller('recipes')
 @ApiTags('Recipes')
 export class RecipesController {
-  constructor(private readonly recipesService: RecipesService) {}
+  constructor(private readonly recipesService: RecipesService) { }
 
   @UseGuards(JwtAuthGuard)
   @Post()
@@ -35,6 +35,11 @@ export class RecipesController {
   @Get('recipe/:id')
   async findOne(@Param('id') id: string) {
     return this.recipesService.findOne(id);
+  }
+
+  @Get(':title')
+  async findByName(@Param('title') title: string) {
+    return this.recipesService.findByName(title);
   }
 
   @UseGuards(JwtAuthGuard)
