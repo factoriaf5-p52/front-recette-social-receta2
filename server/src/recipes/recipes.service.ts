@@ -12,7 +12,7 @@ export class RecipesService {
   constructor(
     @InjectModel(Recipe.name)
     private readonly recipeModel: Model<RecipeDocument>,
-  ) {}
+  ) { }
 
   async create(createRecipeDto: CreateRecipeDto) {
     return this.recipeModel.create(createRecipeDto);
@@ -21,16 +21,23 @@ export class RecipesService {
   async findAll() {
     // return this.recipeModel.find({})
     // .populate("ingredients comments.user", "name")
-    return this.recipeModel.find({}, {"_id": 0, "__v": 0, "is_private": 0})
-    .populate("ingredients", "name")
-    .exec();
+    return this.recipeModel.find({}, { "_id": 0, "__v": 0, "is_private": 0 })
+      .populate("ingredients", "name")
+      .exec();
   }
 
   async findOne(id: string) {
     return this.recipeModel
-    .findOne({ _id: id}, { "__v": 0, "is_private": 0})
-    .populate("ingredients author comments.user", "-_id -__v -shopping_list -email -password")
-    .exec()
+      .findOne({ _id: id }, { "__v": 0, "is_private": 0 })
+      .populate("ingredients author comments.user", "-_id -__v -shopping_list -email -password")
+      .exec()
+  }
+
+  async findByName(name: string) {
+    return this.recipeModel
+      .findOne({ title: { $regex: `${name}` } })
+      // .populate("ingredients author comments.user", "-_id -__v -shopping_list -email -password")
+      .exec()
   }
 
   async findOne2(id: string) {
@@ -47,21 +54,21 @@ export class RecipesService {
     return this.recipeModel.findByIdAndRemove({ _id: id }).exec();
   }
 
-  async addComment(id: string, comment: any) { 
-    let commentary: RecipeDocument = await this.recipeModel.findById(id); 
-    commentary.comments.push(comment); 
-    commentary.save(); 
+  async addComment(id: string, comment: any) {
+    let commentary: RecipeDocument = await this.recipeModel.findById(id);
+    commentary.comments.push(comment);
+    commentary.save();
     return commentary;
   }
 
 
 
-  async addIngredient (
+  async addIngredient(
     recipeId: string,
     ingredient: any,
   ): Promise<Recipe> {
     const recipe = await (await this.recipeModel.findById(recipeId)).populate('ingredients');
     recipe.ingredients.push(ingredient);
     return recipe.save();
-}
+  }
 }
