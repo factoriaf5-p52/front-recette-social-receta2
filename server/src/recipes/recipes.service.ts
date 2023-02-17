@@ -33,9 +33,9 @@ export class RecipesService {
       .exec()
   }
 
-  async findByName(name: string) {
+  async findByName(title: string) {
     return this.recipeModel
-      .findOne({ title: { $regex: `${name}` } })
+      .find({ title: { $regex: `${title}` } })
       // .populate("ingredients author comments.user", "-_id -__v -shopping_list -email -password")
       .exec()
   }

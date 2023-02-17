@@ -14,9 +14,9 @@ export declare class RecipesService {
     findOne(id: string): Promise<Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
     }>;
-    findByName(name: string): Promise<Recipe & import("mongoose").Document<any, any, any> & {
+    findByName(title: string): Promise<(Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
-    }>;
+    })[]>;
     findOne2(id: string): Promise<Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
     }>;

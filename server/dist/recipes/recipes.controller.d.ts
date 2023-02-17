@@ -14,9 +14,9 @@ export declare class RecipesController {
     findOne(id: string): Promise<import("./schemas/recipe.schema").Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
     }>;
-    findByName(name: string): Promise<import("./schemas/recipe.schema").Recipe & import("mongoose").Document<any, any, any> & {
+    findByName(title: string): Promise<(import("./schemas/recipe.schema").Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
-    }>;
+    })[]>;
     update(id: string, updateRecipeDto: UpdateRecipeDto): Promise<import("./schemas/recipe.schema").Recipe & import("mongoose").Document<any, any, any> & {
         _id: import("mongoose").Types.ObjectId;
     }>;

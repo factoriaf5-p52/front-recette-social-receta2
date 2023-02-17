@@ -37,9 +37,9 @@ export class RecipesController {
     return this.recipesService.findOne(id);
   }
 
-  @Get('recipe/:name')
-  async findByName(@Param('name') name: string) {
-    return this.recipesService.findOne(name);
+  @Get(':title')
+  async findByName(@Param('title') title: string) {
+    return this.recipesService.findByName(title);
   }
 
   @UseGuards(JwtAuthGuard)

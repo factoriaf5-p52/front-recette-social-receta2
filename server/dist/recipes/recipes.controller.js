@@ -34,8 +34,8 @@ let RecipesController = class RecipesController {
     async findOne(id) {
         return this.recipesService.findOne(id);
     }
-    async findByName(name) {
-        return this.recipesService.findOne(name);
+    async findByName(title) {
+        return this.recipesService.findByName(title);
     }
     async update(id, updateRecipeDto) {
         return this.recipesService.update(id, updateRecipeDto);
@@ -72,8 +72,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], RecipesController.prototype, "findOne", null);
 __decorate([
-    (0, common_1.Get)('recipe/:name'),
-    __param(0, (0, common_1.Param)('name')),
+    (0, common_1.Get)(':title'),
+    __param(0, (0, common_1.Param)('title')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
