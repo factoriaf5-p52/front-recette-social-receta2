@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-function StaticPage() {
+function NotFound() {
   return (
     <div>
-      <h1>Static</h1>
       <Layout />
+      <h1>404 - No Found</h1>
     </div>
   )
 }
 
-export default StaticPage
+export default NotFound

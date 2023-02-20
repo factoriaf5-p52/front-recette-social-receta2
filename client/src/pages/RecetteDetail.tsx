@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getUsersRequest } from '../api/recep.api'
 import Layout from '../components/Layout'
 
-function RectDetail() {
+function RecetteDetail() {
   const [user, setUsers] = useState()
 
   useEffect(() => {
@@ -19,4 +19,4 @@ function RectDetail() {
   )
 }
 
-export default RectDetail
+export default RecetteDetail

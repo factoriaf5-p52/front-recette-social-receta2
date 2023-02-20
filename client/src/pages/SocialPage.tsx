@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 function SocialPage() {
   return (
     <div>
-      <h1>Socialhhhhhh</h1>
+      <h1>Social</h1>
       <Layout />
     </div>
   )

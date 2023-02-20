@@ -4,32 +4,29 @@ import { getRecipeRequest } from '../api/recep.api';
 import Layout from '../components/Layout'
 
 type Recipe = {
-  title:string;
-  description:string;
+  title: string;
+  description: string;
   author: any;
-  ingredientes:Array<any>;
-  comment:string;
-
-  
+  ingredientes: Array<any>;
+  comment: string;
 }
 
-function RectListPage() {
-  const [recipes, setRecipes] = useState <Recipe[]> ([])
+function RecetteListPage() {
+  const [recipes, setRecipes] = useState<Recipe[]>([])
 
-  useEffect(()=>{
-    async function loardRecipes () {
+  useEffect(() => {
+    async function loardRecipes() {
       const response = await getRecipeRequest()
       setRecipes(response.data)
     }
     loardRecipes()
-
-  }, 
-  [])
+  },
+    [])
 
   return (
     <div>
       <h1>RectList</h1>{
-        recipes.map(recipes=>(
+        recipes.map(recipes => (
           <div>
             <h1>{recipes.title}</h1>
             <p>{recipes.description}</p>
@@ -44,4 +41,4 @@ function RectListPage() {
   )
 }
 
-export default RectListPage
+export default RecetteListPage

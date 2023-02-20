@@ -11,23 +11,23 @@ export class AuthService {
         private usersService: UsersService,
         private jwtService: JwtService,
         private encryptService: EncryptService,
-    ) {};
+    ) { };
 
-    async validateUser(email: string, password: string): Promise<IUser>{
+    async validateUser(email: string, password: string): Promise<IUser> {
         const user = await this.usersService.findOneByEmail(email);
 
-        if(user){
+        if (user) {
             const isValidPassword = await this.encryptService.compare(password, user.password);
-            
-            if(isValidPassword) {
+
+            if (isValidPassword) {
                 const { password, ...result } = user;
-                return result as IUser;                
+                return result as IUser;
             }
         }
         return null;
     }
 
-    async login(user: any){
+    async login(user: any) {
         const payload = { email: user.email, sub: user.userId };
         return {
             access_token: this.jwtService.sign(payload),
