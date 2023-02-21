@@ -15,7 +15,7 @@ export const getRecipesRequest = async () => {
 }
 
 export const getRecipeRequest = async (id:any) =>{
-   return await axios.get(baseRecipeUrl + `/${id}`)
+   return await axios.get(baseRecipeUrl + `/recipe/${id}`)
 }
 
 

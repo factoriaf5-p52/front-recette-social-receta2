@@ -5,6 +5,7 @@ import RecetteCard from '../components/RecetteCard';
 
 
 export type Recipe = {
+  _id:string;
   title: string;
   description: string;
   author: any;
@@ -43,7 +44,8 @@ function SocialPage() {
               <div >
                 <h2>{recipe.title}</h2>
                 <img src={require('../assets/comida.png')} alt="comida.png" />
-                <RecetteCard />
+
+                <RecetteCard recipes={recipe} />
                
               </div>
             ))

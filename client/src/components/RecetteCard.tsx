@@ -11,13 +11,14 @@ export type Recipe = {
 }
 
  function RecetteCard({recipes}:any) {
+  console.log(recipes)
    
     const navigate = useNavigate()
   return (
     <div>
         <h1></h1>
-      <button onClick={()=>navigate(`/RecetteDetail/:id${recipes._id}`)}>Detail</button>
-      <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button>
+      <button onClick={()=>navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button>
+      {/* <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button> */}
     </div>
   )
 }

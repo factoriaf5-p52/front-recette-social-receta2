@@ -3,12 +3,20 @@ import { useParams } from 'react-router-dom'
 import { getRecipeRequest, getUsersRequest } from '../api/recep.api'
 import Layout from '../components/Layout'
 import RecetteCard from '../components/RecetteCard'
-import { Recipe } from './SocialPage'
 
+
+export type Recipe = {
+  _id:string;
+  title: string;
+  description: string;
+  username: string;
+  tags: Array<any>;
+  comment: string;
+}
 
 
 function RecetteDetail() {
-  const [recipes, setRecipe] = useState <Recipe []> ([])
+  const [recipe, setRecipe] = useState <Recipe> ()
 
   const params = useParams ()
     console.log(params)
@@ -16,8 +24,8 @@ function RecetteDetail() {
   useEffect(() => {
     const loadRecipe = async ()=>{
       if(params.id){
-        const recipes = await getRecipeRequest(params.id)
-        console.log(recipes.data)
+        const recipe = await getRecipeRequest(params.id)
+        setRecipe(recipe.data)
       }
     }
     loadRecipe()
@@ -31,7 +39,15 @@ function RecetteDetail() {
        <div className='nav'>
           <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
       </div>
-      <h1>RectDetail</h1>
+      <div  className='div'>
+
+      <img src={require('../assets/comida.png')} alt="comida.png" />
+      <h1 key={recipe?._id}>{recipe?.title}</h1>
+      <p>{recipe?.tags}</p>
+      <p>{recipe?.description}</p>
+      <p>{recipe?.username}</p>
+    
+      </div>
       
       <Layout />
     </div>
