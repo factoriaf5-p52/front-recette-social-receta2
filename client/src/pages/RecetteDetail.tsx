@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { getUsersRequest } from '../api/recep.api'
+import { getRecipeRequest } from '../api/recep.api'
 import Layout from '../components/Layout'
 
 function RecetteDetail() {
   const [user, setUsers] = useState()
 
   useEffect(() => {
-    console.log('users')
+    console.log('recipe #')
 
 
   }, [])
