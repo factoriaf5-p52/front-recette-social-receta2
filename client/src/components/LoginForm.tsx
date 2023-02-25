@@ -1,50 +1,49 @@
-import React, {useRef, useState, useEffect, FormEvent, FormEventHandler} from 'react'
+import React, {useRef, useState, useEffect, FormEvent} from 'react'
+import { authUserRequest } from '../api/users.api';
 import Layout from '../components/Layout'
 
 const LoginForm = (props: any ) => {
-  const userRef = useRef(null);
-  const errRef = useRef(null);
-
-  const [email, setEmail] = useState("");
-  const [pwd, setPwd] = useState("");
-  const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    setErrMsg("");
-  }, [email, pwd])
+  
+  const [post, setPost] = useState({
+    "email": "",
+    "password": ""
+  });
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(email, pwd);
-    setEmail("");
-    setPwd("");
-  }
+
+    authUserRequest(post)
+      .catch()
+      .then(response => console.log(response))
+      .catch(err => console.log(err))
+  };
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPost({...post, [e.target.name]: e.target.value})
+  };
+
+  // TO-DO: STORE ACCESS TOKEN
 
   return (
       <>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h1>Log In</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email:</label>
           <input 
             type="text" 
-            id="email" 
+            name="email" 
             placeholder="email@email.em"
-            ref={userRef} 
             autoComplete="off" 
-            onChange={(e) => setEmail(e.target.value)} 
-            value={email} 
+            onChange={handleInput} 
             required
           />
 
           <label htmlFor="password">Password:</label>
           <input 
             type="password" 
-            id="password" 
+            name="password" 
             placeholder="********"
-            onChange={(e) => setPwd(e.target.value)} 
-            value={pwd} 
+            onChange={handleInput} 
             required
           />
           <button>Log In</button>

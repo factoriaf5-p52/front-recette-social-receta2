@@ -1,64 +1,64 @@
-import React, {useRef, useState, useEffect, FormEvent, FormEventHandler} from 'react'
+import React, { useState, FormEvent } from 'react'
+import { postUserRequest } from '../api/users.api';
 import Layout from '../components/Layout'
 
+// const example = {
+//   "username": "hola",
+//   "email": "email@email.email",
+//   "password": "password"
+// }
+
 const RegisterForm = (props: any) => {
-  const userRef = useRef(null);
-  const errRef = useRef(null);
-
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [pwd, setPwd] = useState("");
-  const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    setErrMsg("");
-  }, [email, pwd])
+  
+  const [post, setPost] = useState({
+    "username": "",
+    "email": "",
+    "password": ""
+  });
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(email, pwd);
-    setUsername("");
-    setEmail("");
-    setPwd("");
-  }
+
+    postUserRequest(post)
+      .catch()
+      .then(response => console.log(response))
+      .catch(err => console.log(err))
+  };
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPost({...post, [e.target.name]: e.target.value})
+  };
 
   return (
       <>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h1>Log In</h1>
+        <h1>Register</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="username">Username:</label>
           <input 
             type="text" 
-            id="username" 
+            name="username" 
             placeholder="username"
-            ref={userRef} 
             autoComplete="off" 
-            onChange={(e) => setUsername(e.target.value)} 
-            value={username} 
+            onChange={handleInput} 
             required
           />
 
           <label htmlFor="email">Email:</label>
           <input 
-            type="text" 
-            id="email" 
-            placeholder="email@email.em"
-            ref={userRef} 
+            type="email" 
+            name="email" 
+            placeholder="enter an email"
             autoComplete="off" 
-            onChange={(e) => setEmail(e.target.value)} 
-            value={email} 
+            onChange={handleInput} 
             required
           />
 
           <label htmlFor="password">Password:</label>
           <input 
             type="password" 
-            id="password" 
-            placeholder="********"
-            onChange={(e) => setPwd(e.target.value)} 
-            value={pwd} 
+            name="password" 
+            placeholder="enter a password"
+            onChange={handleInput} 
             required
           />
           <button>Register</button>
