@@ -1,8 +1,9 @@
-import React, {useRef, useState, useEffect, FormEvent} from 'react'
+import React, { useState, FormEvent} from 'react'
 import { authUserRequest } from '../api/users.api';
 import Layout from '../components/Layout'
 
 const LoginForm = (props: any ) => {
+  let token;
   
   const [post, setPost] = useState({
     "email": "",
@@ -14,15 +15,18 @@ const LoginForm = (props: any ) => {
 
     authUserRequest(post)
       .catch()
-      .then(response => console.log(response))
+      .then((response) => {
+        console.log(response);
+        token = response.data.access_token;
+        console.log("access_token: ", token);
+        sessionStorage.setItem("access_token", token);
+      })
       .catch(err => console.log(err))
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPost({...post, [e.target.name]: e.target.value})
   };
-
-  // TO-DO: STORE ACCESS TOKEN
 
   return (
       <>
