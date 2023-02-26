@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import Layout from './components/Layout';
 import RecetteListPage from './pages/RecetteListPage';
 import RecetteDetail from './pages/RecetteDetail';
-import StatisticcPage from './pages/StatisticPage';
+import StatisticPage from './pages/StatisticPage';
 
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/' element={<Layout />} />
       <Route path='/SocialPage' element={<SocialPage />} />
-      <Route path='/StatisticcPage' element={<StatisticcPage />} />
+      <Route path='/StatisticPage' element={<StatisticPage />} />
       <Route path='/RecetteListPage' element={<RecetteListPage />} />
       <Route path='/RecetteDetail' element={<RecetteDetail />} />
-      <Route path='/RectForm' element={<RectForm />} />
+      <Route path='/RecetteForm' element={<RectForm />} />
       <Route path='/Login' element={<Login />} />
       <Route path='/Profile' element={<Profile />} />
     </Routes>

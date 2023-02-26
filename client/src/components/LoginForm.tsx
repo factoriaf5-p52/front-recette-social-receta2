@@ -30,33 +30,33 @@ const LoginForm = (props: any ) => {
   };
 
   return (
-      <main>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email</label>
-          <input 
-            className="login-input"
-            type="text" 
-            name="email" 
-            // placeholder="email@email.em"
-            autoComplete="off" 
-            onChange={handleInput} 
-            required
-          />
+    <main className="login-main">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <label className="login-label" htmlFor="email">Email</label>
+        <input 
+          className="login-input"
+          type="text" 
+          name="email" 
+          // placeholder="email@email.em"
+          autoComplete="off" 
+          onChange={handleInput} 
+          required
+        />
 
-          <label htmlFor="password">Password</label>
-          <input 
-            className="login-input"
-            type="password" 
-            name="password" 
-            // placeholder="********"
-            onChange={handleInput} 
-            required
-          />
-          <button className="submit-button">Log In</button>
-        </form>
-        <button className="swap-button" onClick={() => props.onFormSwitch("register")}>Register</button>
-        <Layout />
-      </main>
+        <label  className="login-label" htmlFor="password">Password</label>
+        <input 
+          className="login-input"
+          type="password" 
+          name="password" 
+          // placeholder="********"
+          onChange={handleInput} 
+          required
+        />
+        <button className="login-submit-button">Log In</button>
+      </form>
+      <button className="login-swap-button" onClick={() => props.onFormSwitch("register")}>Register</button>
+      <Layout />
+    </main>
   )
 }
 
