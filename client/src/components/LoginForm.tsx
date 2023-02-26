@@ -1,3 +1,4 @@
+import "./Login.css"
 import React, { useState, FormEvent} from 'react'
 import { authUserRequest } from '../api/users.api';
 import Layout from '../components/Layout'
@@ -29,32 +30,33 @@ const LoginForm = (props: any ) => {
   };
 
   return (
-      <>
-        <h1>Log In</h1>
+      <main>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input 
+            className="login-input"
             type="text" 
             name="email" 
-            placeholder="email@email.em"
+            // placeholder="email@email.em"
             autoComplete="off" 
             onChange={handleInput} 
             required
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input 
+            className="login-input"
             type="password" 
             name="password" 
-            placeholder="********"
+            // placeholder="********"
             onChange={handleInput} 
             required
           />
-          <button>Log In</button>
+          <button className="submit-button">Log In</button>
         </form>
-        <button onClick={() => props.onFormSwitch("register")}>Don't have an account? Register here.</button>
+        <button className="swap-button" onClick={() => props.onFormSwitch("register")}>Register</button>
         <Layout />
-      </>
+      </main>
   )
 }
 

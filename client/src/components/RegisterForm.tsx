@@ -30,42 +30,44 @@ const RegisterForm = (props: any) => {
   };
 
   return (
-      <>
-        <h1>Register</h1>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="username">Username:</label>
+      <main>
+        <form onSubmit={handleSubmit} className="login-form">
+          <label htmlFor="username">Username</label>
           <input 
+            className="login-input"
             type="text" 
             name="username" 
-            placeholder="username"
+            // placeholder="username"
             autoComplete="off" 
             onChange={handleInput} 
             required
           />
 
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input 
+            className="login-input"
             type="email" 
             name="email" 
-            placeholder="enter an email"
+            // placeholder="enter an email"
             autoComplete="off" 
             onChange={handleInput} 
             required
           />
 
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Password</label>
           <input 
+            className="login-input"
             type="password" 
             name="password" 
-            placeholder="enter a password"
+            // placeholder="enter a password"
             onChange={handleInput} 
             required
           />
-          <button>Register</button>
+          <button className="submit-button">Register</button>
         </form>
-        <button onClick={() => props.onFormSwitch("login")}>Already have an account? Log in here.</button>
+        <button className="swap-button" onClick={() => props.onFormSwitch("login")}>Log in</button>
         <Layout />
-      </>
+      </main>
   )
 }
 
