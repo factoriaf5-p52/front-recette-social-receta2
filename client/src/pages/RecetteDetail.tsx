@@ -1,17 +1,29 @@
-import { useEffect, useState } from 'react'
+import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getRecipeRequest} from '../api/recep.api'
 import Layout from '../components/Layout'
 import RecetteCard from '../components/RecetteCard'
 
+type Author = {
+  username:string;
+}
+
+type Ingredients = {
+  name:string;
+  measure_unit:string;
+}
+type Measure_unit = {
+
+}
 
 export type Recipe = {
   _id:string;
   title: string;
   description: string;
-  username: string;
+  author:Author;
   tags: Array<any>;
-  comment: string;
+  // comment: string;
+  ingredients:Ingredients;
 }
 
 
@@ -19,12 +31,13 @@ function RecetteDetail() {
   const [recipe, setRecipe] = useState <Recipe> ()
 
   const params = useParams ()
-    console.log(params)
+    // console.log(params)
 
   useEffect(() => {
     const loadRecipe = async ()=>{
       if(params.id){
         const recipe = await getRecipeRequest(params.id)
+        console.log(recipe.data)
         setRecipe(recipe.data)
       }
     }
@@ -42,10 +55,16 @@ function RecetteDetail() {
       <div  className='div'>
 
       <img src={require('../assets/comida.png')} alt="comida.png" />
-      <h1 key={recipe?._id}>{recipe?.title}</h1>
+
+      <h1 key={recipe?._id}>
+        
+        {recipe?.title}</h1>
       <p>{recipe?.tags}</p>
       <p>{recipe?.description}</p>
-      <p>{recipe?.username}</p>
+      <p>{recipe?.author.username}</p>
+      <p>{recipe?.ingredients.measure_unit}</p>
+      {/* <p>{recipe?.comment}</p> */}
+      
     
       </div>
       
