@@ -25,21 +25,7 @@ function RecetteListPage() {
 
   return (
     <div>
-       <div className='nav'>
-          <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
-      </div>
-      <h1>RectList</h1>{
-        recipes.map(recipes => (
-          <div >
-            <h1>{recipes.title}</h1>
-            <p>{recipes.description}</p>
-            <p>{recipes.author}</p>
-            <p>{recipes.ingredientes}</p>
-            <p>{recipes.comment}</p>
-          </div>
-        ))
-      }
-      <Layout />
+      <h1>RectList</h1>
     </div>
   )
 }

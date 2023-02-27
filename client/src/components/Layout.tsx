@@ -1,14 +1,12 @@
 import { Outlet } from 'react-router-dom'
+import Header from './Header'
 import NavBar from './NavBar'
-import Navigaton from './Navigaton'
 
 function Layout() {
   return (
     <>
-        <footer>
-          <NavBar />
-          <Outlet />
-        </footer>
+      <Header />
+      <NavBar />
     </>
   )
 }
