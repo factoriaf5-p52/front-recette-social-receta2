@@ -4,13 +4,19 @@ import axios from 'axios'
 
 const baseUserUrl = ('http://localhost:4000/api/v1/users')
 
-const baseRecipeUrl = ('localhost:4000/api/v1/recipes')
+const baseRecipeUrl = ('http://localhost:4000/api/v1/recipes')
 
 export const getUsersRequest = async () => {
    return axios.get(baseUserUrl)
 }
 
-export const getRecipeRequest = async () => {
+export const getRecipesRequest = async () => {
    return axios.get(baseRecipeUrl)
 }
+
+export const getRecipeRequest = async (id:any) =>{
+   return await axios.get(baseRecipeUrl + `/recipe/${id}`)
+}
+
+
 

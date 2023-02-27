@@ -25,7 +25,7 @@ let RecipesService = class RecipesService {
         return this.recipeModel.create(createRecipeDto);
     }
     async findAll() {
-        return this.recipeModel.find({}, { "_id": 0, "__v": 0, "is_private": 0 })
+        return this.recipeModel.find({}, { "__v": 0, "is_private": 0 })
             .populate("ingredients", "name")
             .exec();
     }

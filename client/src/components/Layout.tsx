@@ -5,7 +5,7 @@ function Layout() {
   return (
     <>
         <Navigaton />
-        <footer>
+        <footer className='foote'>
         <Outlet />
         </footer>
     </>

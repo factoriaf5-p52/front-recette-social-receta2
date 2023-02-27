@@ -1,9 +1,9 @@
 import { type } from 'os'
 import React, { useEffect, useState } from 'react'
-import { getRecipeRequest } from '../api/recep.api';
+import { getRecipesRequest } from '../api/recep.api';
 import Layout from '../components/Layout'
 
-type Recipe = {
+export type Recipe = {
   title: string;
   description: string;
   author: any;
@@ -16,7 +16,7 @@ function RecetteListPage() {
 
   useEffect(() => {
     async function loardRecipes() {
-      const response = await getRecipeRequest()
+      const response = await getRecipesRequest()
       setRecipes(response.data)
     }
     loardRecipes()
@@ -25,9 +25,12 @@ function RecetteListPage() {
 
   return (
     <div>
+       <div className='nav'>
+          <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
+      </div>
       <h1>RectList</h1>{
         recipes.map(recipes => (
-          <div>
+          <div >
             <h1>{recipes.title}</h1>
             <p>{recipes.description}</p>
             <p>{recipes.author}</p>

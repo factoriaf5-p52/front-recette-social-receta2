@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 function Navigaton() {
   return (
     <>
-    <ul>
-        <li> <Link to={'/SocialPage'}>SocialPage</Link></li>
-        <li><Link to={'/StaticPage'}>StaticPage</Link></li>
-        <li><Link to={'/RectListPage'}>RectListPage</Link></li>
-        <li><Link to={'/RectDetail'}>RectDetail</Link></li>
-        <li><Link to={'/RectForm'}>RectForm</Link></li>
+    <ul className='ul'>
+        <li> <Link to={'/SocialPage'}><img src={require('../assets/Rectangle 18.png')} alt="" /></Link></li>
+        <li><Link to={'/Profile'}><img src={require('../assets/Rectangle 19.png')} alt="" /></Link></li>
+        <li><Link to={'/RecetteListPage'}><img src={require('../assets/Rectangle 12.png')} alt="" /></Link></li>
+        <li><Link to={'/StatisticcPage'}><img src={require('../assets/Rectangle 20.png')} alt="" /></Link></li>
+        {/* <li><Link to={'/RecetteDetail'}>RecetteDetail</Link></li> */}
+        <li><Link to={'/RectForm'}><img src={require('../assets/Rectangle 21.png')} alt="" /></Link></li>
         <li><Link to={'/Login'}>Login</Link></li>
-        <li><Link to={'/Profile'}>Profile</Link></li>
-        <li> <Link to={'/'}>Inicio</Link></li>
+        {/* <li> <Link to={'/'}>Inicio</Link></li> */}
         
     </ul>
      
