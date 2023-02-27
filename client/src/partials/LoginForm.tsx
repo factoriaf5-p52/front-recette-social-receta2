@@ -1,4 +1,4 @@
-import "./styles/Login.module.css"
+import "./styles/Login.css"
 import React, { useState, FormEvent } from 'react'
 import { authUserRequest } from '../api/users.api';
 import Layout from './Layout'
@@ -30,7 +30,7 @@ const LoginForm = (props: any) => {
   };
 
   return (
-    <main className="login-main">
+    <div className="login-main">
       <form className="login-form" onSubmit={handleSubmit}>
         <label className="login-label" htmlFor="email">Email</label>
         <input
@@ -55,8 +55,7 @@ const LoginForm = (props: any) => {
         <button className="login-submit-button">Log In</button>
       </form>
       <button className="login-swap-button" onClick={() => props.onFormSwitch("register")}>Register</button>
-      <Layout />
-    </main>
+    </div>
   )
 }
 

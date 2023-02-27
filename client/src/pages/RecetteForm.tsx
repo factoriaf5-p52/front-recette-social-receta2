@@ -11,7 +11,7 @@
 //   comment: string;
 // }
 
-// function RectForm() {
+// function RecetteForm() {
 
 //   const [recipe, setRecipe] = useState ()
 
@@ -19,18 +19,18 @@
 // useEffect(()=>{
 //   async function loadRecipe(){
 //   const response = await getRecipesRequest()
- 
+
 //   console.log(response.data)
 //   }
-   
-   
+
+
 //     loadRecipe()
 // },[])
 
 
 //   return (
 //     <div>
-      
+
 //        <div className='nav'>
 //           <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
 //       </div>
@@ -71,7 +71,7 @@
 //             placeholder='gmail' 
 //             onChange={handleChange}
 //             // value={values}
-            
+
 //             />
 //             <label>password</label>
 //             <textarea 
@@ -90,15 +90,15 @@
 //   )
 // }
 
-// export default RectForm
+// export default RecetteForm
 
 import React from 'react'
 
-export default function 
-() {
+export default function
+  () {
   return (
     <div>
-      
+
     </div>
   )
 }
