@@ -10,7 +10,7 @@ function Home() {
       </div>
       <h1>HOME</h1>
       <button><Link to={'/SocialPage'}>BON APPETIT</Link></button>
-      <Layout />
+      {/* <Layout /> */}
     </div>
   )
 }
