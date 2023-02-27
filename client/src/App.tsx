@@ -19,7 +19,7 @@ function App() {
       <Route path='/SocialPage' element={<SocialPage />} />
       <Route path='/StatisticcPage' element={<StatisticPage />} />
       <Route path='/RecetteListPage' element={<RecetteListPage />} />
-      <Route path='/RecetteDetail' element={<RecetteDetail />} />
+      <Route path='/RecetteDetail/:id' element={<RecetteDetail />} />
       <Route path='/RectForm' element={<RectForm />} />
       <Route path='/Login' element={<Login />} />
       <Route path='/Profile' element={<Profile />} />

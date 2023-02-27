@@ -5,15 +5,9 @@ import Navigaton from './Navigaton'
 function Layout() {
   return (
     <>
-<<<<<<< HEAD
-        <Navigaton />
-        <footer className='foote'>
-        <Outlet />
-=======
         <footer>
           <NavBar />
           <Outlet />
->>>>>>> navbar
         </footer>
     </>
   )
