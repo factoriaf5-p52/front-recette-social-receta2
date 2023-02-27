@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getRecipeRequest, getUsersRequest } from '../api/recep.api'
+import { getRecipeRequest} from '../api/recep.api'
 import Layout from '../components/Layout'
 import RecetteCard from '../components/RecetteCard'
 

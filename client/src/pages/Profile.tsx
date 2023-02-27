@@ -1,6 +1,6 @@
 import { type } from 'os'
 import React, { useEffect, useState } from 'react'
-import { getUsersRequest } from '../api/recep.api'
+import { getUsersRequest } from '../api/users.api'
 import Layout from '../components/Layout'
 
 type Props = {
