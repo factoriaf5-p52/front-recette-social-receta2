@@ -1,7 +1,7 @@
 import { type } from 'os'
 import React, { useEffect, useState } from 'react'
 import { getRecipesRequest } from '../api/recep.api';
-import Layout from '../components/Layout'
+import Layout from '../partials/Layout'
 
 export type Recipe = {
   title: string;

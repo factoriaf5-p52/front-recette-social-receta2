@@ -1,7 +1,4 @@
-import React from 'react'
-import Layout from '../components/Layout'
-
-function StatisticcPage() {
+export function StatisticPage() {
   return (
     <div>
       <h1>Static</h1>
@@ -9,4 +6,4 @@ function StatisticcPage() {
   )
 }
 
-export default StatisticcPage
+export default StatisticPage

@@ -1,0 +1,17 @@
+.navbar{
+    background-color: var(--primary);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.navbar ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li img{
+    width: 2rem;
+}

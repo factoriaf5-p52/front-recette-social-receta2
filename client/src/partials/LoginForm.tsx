@@ -1,11 +1,11 @@
-import "./Login.css"
-import React, { useState, FormEvent} from 'react'
+import "./styles/Login.module.css"
+import React, { useState, FormEvent } from 'react'
 import { authUserRequest } from '../api/users.api';
-import Layout from '../components/Layout'
+import Layout from './Layout'
 
-const LoginForm = (props: any ) => {
+const LoginForm = (props: any) => {
   let token;
-  
+
   const [post, setPost] = useState({
     "email": "",
     "password": ""
@@ -26,30 +26,30 @@ const LoginForm = (props: any ) => {
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPost({...post, [e.target.name]: e.target.value})
+    setPost({ ...post, [e.target.name]: e.target.value })
   };
 
   return (
     <main className="login-main">
       <form className="login-form" onSubmit={handleSubmit}>
         <label className="login-label" htmlFor="email">Email</label>
-        <input 
+        <input
           className="login-input"
-          type="text" 
-          name="email" 
+          type="text"
+          name="email"
           // placeholder="email@email.em"
-          autoComplete="off" 
-          onChange={handleInput} 
+          autoComplete="off"
+          onChange={handleInput}
           required
         />
 
-        <label  className="login-label" htmlFor="password">Password</label>
-        <input 
+        <label className="login-label" htmlFor="password">Password</label>
+        <input
           className="login-input"
-          type="password" 
-          name="password" 
+          type="password"
+          name="password"
           // placeholder="********"
-          onChange={handleInput} 
+          onChange={handleInput}
           required
         />
         <button className="login-submit-button">Log In</button>

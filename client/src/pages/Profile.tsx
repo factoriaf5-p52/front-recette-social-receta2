@@ -1,7 +1,7 @@
 import { type } from 'os'
 import React, { useEffect, useState } from 'react'
 import { getUsersRequest } from '../api/users.api'
-import Layout from '../components/Layout'
+import Layout from '../partials/Layout'
 
 type Props = {
   _id?: any;
@@ -24,10 +24,7 @@ function Profile() {
   }, [])
 
   return (
-    <div>
-       <div className='nav'>
-          <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
-      </div>
+    <>
       <h1>Profile</h1>
       {
         user.map(users => (
@@ -38,7 +35,7 @@ function Profile() {
         ))
       }
       <Layout />
-    </div>
+    </>
   )
 }
 

@@ -1,9 +1,9 @@
 import React, { useState, FormEvent } from 'react'
 import { postUserRequest } from '../api/users.api';
-import Layout from '../components/Layout'
+import Layout from './Layout'
 
 const RegisterForm = (props: any) => {
-  
+
   const [post, setPost] = useState({
     "username": "",
     "email": "",
@@ -20,41 +20,41 @@ const RegisterForm = (props: any) => {
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPost({...post, [e.target.name]: e.target.value})
+    setPost({ ...post, [e.target.name]: e.target.value })
   };
 
   return (
     <main className="login-main">
       <form onSubmit={handleSubmit} className="login-form">
         <label className="login-label" htmlFor="username">Username</label>
-        <input 
+        <input
           className="login-input"
-          type="text" 
-          name="username" 
+          type="text"
+          name="username"
           // placeholder="username"
-          autoComplete="off" 
-          onChange={handleInput} 
+          autoComplete="off"
+          onChange={handleInput}
           required
         />
 
         <label className="login-label" htmlFor="email">Email</label>
-        <input 
+        <input
           className="login-input"
-          type="email" 
-          name="email" 
+          type="email"
+          name="email"
           // placeholder="enter an email"
-          autoComplete="off" 
-          onChange={handleInput} 
+          autoComplete="off"
+          onChange={handleInput}
           required
         />
 
         <label className="login-label" htmlFor="password">Password</label>
-        <input 
+        <input
           className="login-input"
-          type="password" 
-          name="password" 
+          type="password"
+          name="password"
           // placeholder="enter a password"
-          onChange={handleInput} 
+          onChange={handleInput}
           required
         />
         <button className="login-submit-button">Register</button>

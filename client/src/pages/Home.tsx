@@ -1,17 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Layout from '../components/Layout'
+import Layout from '../partials/Layout'
 
 function Home() {
   return (
-    <div>
-      <div className='nav'>
-          <img className='img' src={require('../assets/Ellipse 4.png')} alt="" />
-      </div>
+    <>
       <h1>HOME</h1>
-      <button><Link to={'/SocialPage'}>BON APPETIT</Link></button>
-      {/* <Layout /> */}
-    </div>
+      <button>
+        <Link to={'/SocialPage'}>BON APPETIT</Link>
+      </button>
+    </>
   )
 }
 
