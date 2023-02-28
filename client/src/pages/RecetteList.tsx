@@ -1,16 +1,9 @@
 import { useEffect, useState } from 'react'
 import { getRecipesRequest } from '../api/recep.api';
-import RecipeCardSearch from '../partials/RecipeCardList';
+import RecipeCard from '../partials/RecipeCardList';
+import { Recipe } from '../partials/RecipeCardList';
+import './styles/RecetteList.css'
 
-
-export type Recipe = {
-  _id: string;
-  title: string;
-  description: string;
-  author: any;
-  ingredientes: Array<any>;
-  comment: string;
-}
 
 function RecetteListPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
@@ -26,15 +19,13 @@ function RecetteListPage() {
 
 
   return (
-    <>
+    <div className="card-container">
       {
         recipes.map(recipe => (
-          <div >
-            <RecipeCardSearch recipes={recipe} />
-          </div>
+          <RecipeCard recipes={recipe} />
         ))
       }
-    </>
+    </div>
   )
 }
 

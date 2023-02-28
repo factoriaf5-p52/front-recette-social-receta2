@@ -2,15 +2,12 @@ import './styles/CardList.css';
 import { useNavigate } from 'react-router-dom'
 
 export type Recipe = {
-    _id: any
+    _id: string;
     title: string;
-    description: string;
-    author: any;
-    ingredientes: Array<any>;
-    comment: string;
+    time: number;
 }
 
-function RecipeCardSearch({ recipes }: any) {
+function RecipeCard({ recipes }: any) {
     const navigate = useNavigate()
 
     return (
@@ -18,9 +15,10 @@ function RecipeCardSearch({ recipes }: any) {
             <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>
                 <img src={require('../assets/mock.png')} alt="mock image" />
                 <h1>{recipes.title}</h1>
+                <p>{recipes.time}min</p>
             </button>
         </div>
     )
 }
 
-export default RecipeCardSearch
+export default RecipeCard

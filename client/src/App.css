@@ -22,18 +22,26 @@ q:before, q:after {
 content: '';
 content: none;
 }
+button{
+    background-color: transparent;
+}
 
 /* VARIABLES */
 :root{
 --primary: #57CC8D;
 --secondary: #B0E7CA;
---white: #EBF7FF;
+--white: #fdffeb;
 --accent: #EC2B3A;
 --soft-accent: #ED4556;
 }
 
 
+/* COMMON STYLES */
 main{
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
 }
