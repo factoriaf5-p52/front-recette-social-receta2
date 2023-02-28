@@ -5,10 +5,10 @@ import Navigaton from './Navigaton'
 function Layout() {
   return (
     <>
-        <footer>
+        {/* <footer>
           <NavBar />
           <Outlet />
-        </footer>
+        </footer> */}
     </>
   )
 }

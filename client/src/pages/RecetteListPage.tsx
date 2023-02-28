@@ -35,7 +35,8 @@ function RecetteListPage() {
             <p>{recipes.description}</p>
             <p>{recipes.author}</p>
             <p>{recipes.ingredientes}</p>
-            <p>{recipes.comment}</p>
+
+           
           </div>
         ))
       }
