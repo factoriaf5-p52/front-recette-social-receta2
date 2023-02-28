@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import SocialPage from './pages/SocialPage';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
-import RecetteListPage from './pages/RecetteListPage';
+import RecetteListPage from './pages/RecetteList';
 import RecetteDetail from './pages/RecetteDetail';
 import StatisticPage from './pages/StatisticPage';
 import Layout from './partials/Layout';

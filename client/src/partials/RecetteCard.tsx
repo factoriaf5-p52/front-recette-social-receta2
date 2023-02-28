@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export type Recipe = {
-  _id:any
+  _id: any
   title: string;
   description: string;
   author: any;
@@ -10,14 +10,14 @@ export type Recipe = {
   comment: string;
 }
 
- function RecetteCard({recipes}:any) {
+function RecetteCard({ recipes }: any) {
   console.log(recipes)
-   
-    const navigate = useNavigate()
+
+  const navigate = useNavigate()
   return (
     <div>
-        <h1></h1>
-      <button onClick={()=>navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button>
+      <h1></h1>
+      <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button>
       {/* <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button> */}
     </div>
   )

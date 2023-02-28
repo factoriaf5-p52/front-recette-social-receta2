@@ -1,9 +1,10 @@
-import { type } from 'os'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getRecipesRequest } from '../api/recep.api';
-import Layout from '../partials/Layout'
+import RecipeCardSearch from '../partials/RecipeCardList';
+
 
 export type Recipe = {
+  _id: string;
   title: string;
   description: string;
   author: any;
@@ -23,10 +24,17 @@ function RecetteListPage() {
   },
     [])
 
+
   return (
-    <div>
-      <h1>RectList</h1>
-    </div>
+    <>
+      {
+        recipes.map(recipe => (
+          <div >
+            <RecipeCardSearch recipes={recipe} />
+          </div>
+        ))
+      }
+    </>
   )
 }
 

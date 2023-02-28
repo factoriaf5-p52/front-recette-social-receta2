@@ -23,7 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import { Document } from 'mongoose';
-import { Ingredient } from 'src/ingredients/schema/ingredient.schema';
+import { Ingredient } from 'src/ingredients/schemas/ingredient.schema';
 export type UserDocument = User & Document;
 export declare class User {
     username: string;

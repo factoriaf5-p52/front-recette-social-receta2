@@ -1,0 +1,11 @@
+.card{
+    width: 100vw;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+}
+
+.card img{
+    width: 5rem;
+}

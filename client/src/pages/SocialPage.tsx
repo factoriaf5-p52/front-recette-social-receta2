@@ -21,8 +21,6 @@ function SocialPage() {
       const response = await getRecipesRequest()
       setRecipes(response.data)
     }
-
-
     loadRecipes()
   }, [])
 
