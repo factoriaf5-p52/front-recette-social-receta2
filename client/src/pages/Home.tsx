@@ -7,7 +7,7 @@ function Home() {
     <>
       <h1>HOME</h1>
       <button>
-        <Link to={'/SocialPage'}>BON APPETIT</Link>
+        <Link to={'/social'}>BON APPETIT</Link>
       </button>
     </>
   )

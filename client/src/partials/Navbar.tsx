@@ -32,7 +32,7 @@ export const Navbar = (props: Props) => {
         </li>
 
         <li>
-          <Link to={'/'}>
+          <Link to={'/recetteForm'}>
             <img src={require('../assets/add.svg').default} alt="add-logo" />
           </Link>
         </li>

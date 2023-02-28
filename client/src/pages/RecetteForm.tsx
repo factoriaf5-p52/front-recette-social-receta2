@@ -86,4 +86,4 @@ function RecetteForm() {
   )
 }
 
-export default RecetteForm()
+export default RecetteForm
