@@ -21,10 +21,10 @@ export type Recipe = {
   title: string;
   description: string;
   author:Author;
-  comments: Comment[];
-  ingredients:Ingredient[] 
   time:string 
   tags: Array<any>;
+  comments: Comment[];
+  ingredients:Ingredient[] 
 }
 
 

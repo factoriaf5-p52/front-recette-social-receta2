@@ -19,11 +19,12 @@ export const Navbar = (props: Props) => {
           </Link>
         </li>
 
-        {/* <li>
-        <Link to={''}>
-          <img src={require('../assets/fav.svg').default} alt="fav-logo" />
+        <li>
+        <Link to={'/login'}>
+          login
+          {/* <img src={require('../assets/fav.svg').default} alt="fav-logo" /> */}
         </Link>  
-        </li> */}
+        </li>
 
         <li>
           <Link to={'/recetteList'}>

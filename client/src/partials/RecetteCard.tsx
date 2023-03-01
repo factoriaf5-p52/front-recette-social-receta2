@@ -17,7 +17,7 @@ function RecetteCard({ recipes }: any) {
   return (
     <div>
       <h1></h1>
-      <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button>
+      {/* <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button> */}
       {/* <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button> */}
     </div>
   )

@@ -45,3 +45,47 @@ main{
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+
+.formulario{
+    
+    text-align: center;
+    padding: 10px;
+    
+}
+.formulario-input {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+    
+    
+}
+.formulario-input1{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid ;
+  
+
+}
+.formulario-input2{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+}
+.formulario-input3{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+    font-weight: bold;
+}
+
+.new-receta {
+    border: solid;
+    border-radius: 50px ;
+    padding: 10px;
+    box-shadow: #57CC8D;
+}

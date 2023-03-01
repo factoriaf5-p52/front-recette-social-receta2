@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Form, Formik } from 'formik';
-import { getRecipesRequest } from '../api/recep.api';
+import { createRecipe } from '../api/recep.api';
 
 export type Recipe = {
   title: string;
   description: string;
   author: any;
   ingredientes: Array<any>;
-  comment: string;
+  
 }
 
 function RecetteForm() {
@@ -15,70 +15,71 @@ function RecetteForm() {
   const [recipe, setRecipe] = useState()
 
 
-  useEffect(() => {
-    async function loadRecipe() {
-      const response = await getRecipesRequest()
-
-      console.log(response.data)
-    }
-
-
-    loadRecipe()
-  }, [])
 
 
   return (
-    <div>
+    <div className='formulario'>
       <h1>Nueva Receta</h1>
       <Formik
         initialValues={{
+          _id:'',
           title: '',
           description: '',
-          author: '',
-          ingredientes: '',
-          comment: '',
+          author:{username:''},
+          time:'',
+          tags: [],
+         
+         
         }}
         onSubmit={(values) => {
           console.log(values)
+          createRecipe(values)
         }}
       >
         {({ handleChange, handleSubmit }) => (
 
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} >
 
-            <label>title</label>
+            <label>Nombre de la Recette</label>
             <input
+              className='formulario-input'
               type="text"
-              name='description'
+              name='title'
               placeholder='witer too'
               onChange={handleChange}
             />
             <br />
-            <label>author</label>
+            <div className='username'>
+            <label>Username</label>
             <input
+              className='formulario-input1'
               type="text"
               name='author'
               placeholder='usuario'
               onChange={handleChange}
             />
+            </div>
             <br />
-            <label>ingredientes</label>
+            <label>Tiempo de Cocina</label>
             <input
+              className='formulario-input2'
               type="text"
-              name='ingredientes'
+              name='time'
               placeholder='añade tus ingredientes'
               onChange={handleChange}
             />
-            <br />
-            <label>comment</label>
+             <br />
+            <label>Tags de la Receta</label>
             <input
+              className='formulario-input3'
               type="text"
-              name='comment'
-              placeholder='añade tus comment'
+              name='tags'
+              placeholder='añade tus ingredientes'
               onChange={handleChange}
             />
+           
 
-            <button>Save</button>
+            <button className='new-receta'>Añadir Nueva Receta</button>
           </Form>
         )}
       </Formik>

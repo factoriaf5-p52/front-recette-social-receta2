@@ -17,9 +17,9 @@ const LoginForm = (props: any) => {
     authUserRequest(post)
       .catch()
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         token = response.data.access_token;
-        console.log("access_token: ", token);
+        // console.log("access_token: ", token);
         sessionStorage.setItem("access_token", token);
       })
       .catch(err => console.log(err))

@@ -8,7 +8,7 @@ export type Recipe = {
   title: string;
   description: string;
   author: any;
-  ingredientes: Array<any>;
+  ingredientes: string;
   comment: string;
 }
 
