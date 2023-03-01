@@ -1,89 +1,98 @@
-import { useEffect, useState } from 'react'
-import { Form, Formik } from 'formik';
-import { getRecipesRequest } from '../api/recep.api';
+// import { useEffect, useState } from 'react'
+// import { Form, Formik } from 'formik';
+// import { getRecipesRequest } from '../api/recep.api';
 
-export type Recipe = {
-  title: string;
-  description: string;
-  author: any;
-  ingredientes: Array<any>;
-  comment: string;
+// export type Recipe = {
+//   title: string;
+//   description: string;
+//   author: any;
+//   ingredientes: Array<any>;
+//   comment: string;
+// }
+
+// function RecetteForm() {
+
+//   const [recipe, setRecipe] = useState()
+
+
+//   useEffect(() => {
+//     async function loadRecipe() {
+//       const response = await getRecipesRequest()
+
+//       console.log(response.data)
+//     }
+
+
+//     loadRecipe()
+//   }, [])
+
+
+//   return (
+//     <div>
+//       <h1>Nueva Receta</h1>
+//       <Formik
+//         initialValues={{
+//           title: '',
+//           description: '',
+//           author: '',
+//           ingredientes: '',
+//           comment: '',
+//         }}
+//         onSubmit={(values) => {
+//           console.log(values)
+//         }}
+//       >
+//         {({ handleChange, handleSubmit }) => (
+
+//           <Form onSubmit={handleSubmit}>
+
+//             <label>title</label>
+//             <input
+//               type="text"
+//               name='description'
+//               placeholder='witer too'
+//               onChange={handleChange}
+//             />
+//             <br />
+//             <label>author</label>
+//             <input
+//               type="text"
+//               name='author'
+//               placeholder='usuario'
+//               onChange={handleChange}
+//             />
+//             <br />
+//             <label>ingredientes</label>
+//             <input
+//               type="text"
+//               name='ingredientes'
+//               placeholder='añade tus ingredientes'
+//               onChange={handleChange}
+//             />
+//             <br />
+//             <label>comment</label>
+//             <input
+//               type="text"
+//               name='comment'
+//               placeholder='añade tus comment'
+//               onChange={handleChange}
+//             />
+
+//             <button>Save</button>
+//           </Form>
+//         )}
+//       </Formik>
+//     </div>
+//   )
+// }
+
+
+import React from 'react'
+
+const RecetteForm = () => {
+    return (
+        <div>RecetteForm</div>
+    )
 }
 
-function RecetteForm() {
-
-  const [recipe, setRecipe] = useState()
-
-
-  useEffect(() => {
-    async function loadRecipe() {
-      const response = await getRecipesRequest()
-
-      console.log(response.data)
-    }
-
-
-    loadRecipe()
-  }, [])
-
-
-  return (
-    <div>
-      <h1>Nueva Receta</h1>
-      <Formik
-        initialValues={{
-          title: '',
-          description: '',
-          author: '',
-          ingredientes: '',
-          comment: '',
-        }}
-        onSubmit={(values) => {
-          console.log(values)
-        }}
-      >
-        {({ handleChange, handleSubmit }) => (
-
-          <Form onSubmit={handleSubmit}>
-
-            <label>title</label>
-            <input
-              type="text"
-              name='description'
-              placeholder='witer too'
-              onChange={handleChange}
-            />
-            <br />
-            <label>author</label>
-            <input
-              type="text"
-              name='author'
-              placeholder='usuario'
-              onChange={handleChange}
-            />
-            <br />
-            <label>ingredientes</label>
-            <input
-              type="text"
-              name='ingredientes'
-              placeholder='añade tus ingredientes'
-              onChange={handleChange}
-            />
-            <br />
-            <label>comment</label>
-            <input
-              type="text"
-              name='comment'
-              placeholder='añade tus comment'
-              onChange={handleChange}
-            />
-
-            <button>Save</button>
-          </Form>
-        )}
-      </Formik>
-    </div>
-  )
-}
-
-export default RecetteForm()
+export default RecetteForm

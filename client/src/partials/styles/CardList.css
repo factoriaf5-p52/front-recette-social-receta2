@@ -6,5 +6,15 @@
 }
 
 .card img{
-    width: 5rem;
+    width: 8rem;
+    height: auto;
+}
+
+.card h1{
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.card p{
+    font-size: 1rem;
 }

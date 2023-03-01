@@ -1,32 +1,27 @@
 import { useEffect, useState } from 'react'
 import { getRecipesRequest } from '../api/recep.api';
-import RecipeCard from '../partials/RecipeCardList';
-import { Recipe } from '../partials/RecipeCardList';
+import RecipeCard from '../partials/RecipeCard';
+import { Recipe } from '../types/Recipe';
 import './styles/RecetteList.css'
 
-
-function RecetteListPage() {
-  const [recipes, setRecipes] = useState<Recipe[]>([])
+function RecetteList() {
+  const [recipes, setRecipe] = useState<Recipe[]>([])
 
   useEffect(() => {
-    async function loardRecipes() {
+    async function loadRecipes() {
       const response = await getRecipesRequest()
-      setRecipes(response.data)
+      setRecipe(response.data)
     }
-    loardRecipes()
-  },
-    [])
-
+    loadRecipes()
+  }, [])
 
   return (
     <div className="card-container">
-      {
-        recipes.map(recipe => (
-          <RecipeCard recipes={recipe} />
-        ))
-      }
+      {recipes.map(recipe => (
+        <RecipeCard recipe={recipe} key={recipe._id} />
+      ))}
     </div>
   )
 }
 
-export default RecetteListPage
+export default RecetteList

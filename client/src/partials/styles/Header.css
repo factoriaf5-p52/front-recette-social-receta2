@@ -1,5 +1,5 @@
 .header{
-    width: 100vw;
+    width: 100%;
     background-color: var(--primary);
     height: 3rem;
     padding: .5rem 0 .5rem 0;

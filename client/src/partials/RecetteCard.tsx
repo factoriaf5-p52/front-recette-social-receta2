@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export type Recipe = {
@@ -18,7 +17,6 @@ function RecetteCard({ recipes }: any) {
     <div>
       <h1></h1>
       <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button>
-      {/* <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button> */}
     </div>
   )
 }
