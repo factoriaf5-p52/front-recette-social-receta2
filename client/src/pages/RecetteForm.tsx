@@ -19,8 +19,8 @@ function RecetteForm() {
 
   return (
     <div className='formulario'>
-      <h1>Nueva Receta</h1>
-      <Formik
+      <h1 className='nueva'>Nueva Receta</h1>
+      <Formik 
         initialValues={{
           _id:'',
           title: '',
@@ -39,13 +39,14 @@ function RecetteForm() {
         {({ handleChange, handleSubmit }) => (
 
           <Form onSubmit={handleSubmit} >
+            <div className='receta-formulario'>
 
             <label>Nombre de la Recette</label>
             <input
               className='formulario-input'
               type="text"
               name='title'
-              placeholder='witer too'
+              placeholder='Nombre de la Recette'
               onChange={handleChange}
             />
             <br />
@@ -55,7 +56,7 @@ function RecetteForm() {
               className='formulario-input1'
               type="text"
               name='author'
-              placeholder='usuario'
+              placeholder='Username'
               onChange={handleChange}
             />
             </div>
@@ -64,7 +65,7 @@ function RecetteForm() {
             <input
               className='formulario-input2'
               type="text"
-              name='time'
+              name='Tiempo de Cocina'
               placeholder='añade tus ingredientes'
               onChange={handleChange}
             />
@@ -73,10 +74,12 @@ function RecetteForm() {
             <input
               className='formulario-input3'
               type="text"
-              name='tags'
+              name='Tags de la Receta'
               placeholder='añade tus ingredientes'
               onChange={handleChange}
             />
+            </div>
+
            
 
             <button className='new-receta'>Añadir Nueva Receta</button>

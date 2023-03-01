@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getRecipesRequest } from '../api/recep.api'
 import RecetteCard from '../partials/RecetteCard';
+import RecetteDetail from './RecetteDetail';
+import RecetteListPage from './RecetteList';
 
 
 export type Recipe = {
@@ -27,14 +29,15 @@ function SocialPage() {
 
   return (
     <>
-      <div className='div'>
-        <h1>Social</h1>
-
-        <p>Top 10, on the type of food you like</p>
+    <div className='titulo-social'>
+      <h1 >Social</h1>
+      <h5 className='social1'>Top 10, on the type of food you like</h5>
+    </div>
+      <div className='social'>
         {
           recipes.map(recipe => (
             <div >
-              <h2>{recipe.title}</h2>
+              <h2 className='title-social'>{recipe.title}</h2>
               <img src={require('../assets/mock.png')} alt="mock image" />
 
               <RecetteCard recipes={recipe} />
@@ -42,6 +45,7 @@ function SocialPage() {
             </div>
           ))
         }
+        
       </div>
     </>
   )
