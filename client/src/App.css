@@ -45,47 +45,120 @@ main{
 *{
     font-family: 'Poppins', sans-serif;
 }
-
-
-.formulario{
-    
+/* -----------------------------RECETA DETAIL-------------------- */
+.detail{
     text-align: center;
-    padding: 10px;
-    
+    border: solid #57CC8D;
+    box-shadow: gray 5px 1px 10px;
+    border-radius: 10px;
+    margin: 40px;
+}
+.detail-recette{
+    text-align: center;
+}
+.imag-detail{
+    width: 280px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0; 
+}
+.title, p{
+    text-align: left;
+    margin-left: 20px;
+}
+@media (min-width: 800px){
+    .detail{
+        display: flex;
+        gap: 2px;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+    }
+    h3{
+        
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+    .ingrediente {
+        
+        text-align: justify;
+        margin-left: 30px;
+    }
+}
+
+/* -----------------------------FORMULARIO NUEVA RECETA-------------------- */
+.formulario{
+    text-align: center;
+    padding: 10px; 
+}
+.receta-formulario{
+    padding: 20px;
 }
 .formulario-input {
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border: solid;
-    
-    
+    border: solid #B0E7CA;  
 }
 .formulario-input1{
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border: solid ;
-  
-
+    border: solid #B0E7CA;
 }
 .formulario-input2{
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border: solid;
+    border: solid #B0E7CA;
 }
 .formulario-input3{
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border: solid;
+    border: solid #B0E7CA;
     font-weight: bold;
 }
-
 .new-receta {
-    border: solid;
+    border: solid #EC2B3A;
+    background-color: #EC2B3A;
     border-radius: 50px ;
     padding: 10px;
     box-shadow: #57CC8D;
 }
+@media (min-width: 400px){
+    .formulario{
+        border: solid #B0E7CA;
+        border-radius: 0 0 0 70px;
+        margin: 100px;
+        width: 400px;
+        margin: 0 auto;
+    }
+    .new-receta {
+       color: #EC2B3A;
+       background-color: #57CC8D;  
+    }
+}
+/* ----------------------------SOCIAL PAGE-------------------- */
+    .titulo-social{
+        text-align: center;
+    }
+    .social{
+        text-align: center;
+        padding: 10px;
+    }
+    .social1{
+        margin-top: 20px;
+        margin-bottom: 20px; 
+    }
+    .title-social{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    @media (min-width: 400px){
+        .social{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+   
