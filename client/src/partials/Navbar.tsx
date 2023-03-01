@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
-import './styles/Navbar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './styles/Navbar.css';
 
 type Props = {}
 
-export const Navbar = (props: Props) => {
+const Navbar = (props: Props) => {
   return (
     <div className="navbar">
       <ul>
@@ -41,3 +42,5 @@ export const Navbar = (props: Props) => {
     </div>
   )
 }
+
+export default Navbar;
