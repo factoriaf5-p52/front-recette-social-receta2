@@ -19,7 +19,9 @@ body{
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /* the 5rem margin is to compensate for the margin in main, (in App.css). 
+    without it, the login page scrolls up and down*/
+    margin: -5rem auto; 
     width: 75vw;
 }
 
