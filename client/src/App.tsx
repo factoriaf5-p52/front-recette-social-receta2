@@ -21,13 +21,14 @@ function App() {
     <Routes>
       <Route index element={<Home />} />
       <Route path="/" element={<Layout />}>
-      <Route path='/social' element={<SocialPage />} />
-      <Route path='/statistic' element={<StatisticPage />} />
-      <Route path='/recetteList' element={<RecetteListPage />} />
-      <Route path='/recetteDetail/:id' element={<RecetteDetail />} />
-      <Route path='/recetteForm' element={<RecetteForm />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/profile' element={<Profile />} />
+        <Route index element={<Home />} />
+        <Route path='/social' element={<SocialPage />} />
+        <Route path='/statistic' element={<StatisticPage />} />
+        <Route path='/recetteList' element={<RecetteListPage />} />
+        <Route path='/recetteDetail/:id' element={<RecetteDetail />} />
+        <Route path='/recetteForm' element={<RecetteForm />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/profile/:id' element={<Profile />} />
       </Route>
     </Routes>
   );
