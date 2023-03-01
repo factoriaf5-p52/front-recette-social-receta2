@@ -19,15 +19,15 @@ import RecetteForm from './pages/RecetteForm';
 function App() {
   return (
     <Routes>
+      <Route index element={<Home />} />
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path='/social' element={<SocialPage />} />
-        <Route path='/statistic' element={<StatisticPage />} />
-        <Route path='/recetteList' element={<RecetteListPage />} />
-        <Route path='/recetteDetail/:id' element={<RecetteDetail />} />
-        <Route path='/recetteForm' element={<RecetteForm />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
+      <Route path='/social' element={<SocialPage />} />
+      <Route path='/statistic' element={<StatisticPage />} />
+      <Route path='/recetteList' element={<RecetteListPage />} />
+      <Route path='/recetteDetail/:id' element={<RecetteDetail />} />
+      <Route path='/recetteForm' element={<RecetteForm />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/profile' element={<Profile />} />
       </Route>
     </Routes>
   );
