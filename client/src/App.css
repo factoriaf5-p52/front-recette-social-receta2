@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+*{
+margin: 0;
+padding: 0;
+border: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+button{
+    background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* VARIABLES */
+:root{
+--primary: #57CC8D;
+--secondary: #B0E7CA;
+--white: #fdffeb;
+--accent: #EC2B3A;
+--soft-accent: #ED4556;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* COMMON STYLES */
+main{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+*{
+    font-family: 'Poppins', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.formulario{
+    
+    text-align: center;
+    padding: 10px;
+    
+}
+.formulario-input {
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+    
+    
+}
+.formulario-input1{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid ;
+  
+
+}
+.formulario-input2{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+}
+.formulario-input3{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: solid;
+    font-weight: bold;
+}
+
+.new-receta {
+    border: solid;
+    border-radius: 50px ;
+    padding: 10px;
+    box-shadow: #57CC8D;
 }

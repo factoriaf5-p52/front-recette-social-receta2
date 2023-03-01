@@ -1,13 +1,9 @@
-import React from 'react'
-import Layout from '../components/Layout'
-
-function StatisticcPage() {
+export function StatisticPage() {
   return (
     <div>
       <h1>Static</h1>
-      <Layout />
     </div>
   )
 }
 
-export default StatisticcPage
+export default StatisticPage
