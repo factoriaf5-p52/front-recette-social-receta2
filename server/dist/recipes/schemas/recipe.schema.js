@@ -52,10 +52,6 @@ __decorate([
     __metadata("design:type", Number)
 ], Recipe.prototype, "views", void 0);
 __decorate([
-    (0, mongoose_1.Prop)([String]),
-    __metadata("design:type", Array)
-], Recipe.prototype, "keywords", void 0);
-__decorate([
     (0, mongoose_1.Prop)([comment_schema_1.CommentSchema]),
     __metadata("design:type", Array)
 ], Recipe.prototype, "comments", void 0);

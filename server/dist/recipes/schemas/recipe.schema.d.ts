@@ -10,7 +10,6 @@ export declare class Recipe {
     tags: Array<string>;
     score: number;
     views: number;
-    keywords: string[];
     comments: Comment[];
     photo: string;
 }
