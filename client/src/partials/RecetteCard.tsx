@@ -10,6 +10,9 @@ export type Recipe = {
   comment: string;
 }
 
+
+
+
 function RecetteCard({ recipes }: any) {
   console.log(recipes)
 
@@ -19,6 +22,8 @@ function RecetteCard({ recipes }: any) {
       <h1></h1>
       {/* <button onClick={() => navigate(`/RecetteDetail/${recipes._id}`)}>Detail</button> */}
       {/* <button onClick={()=>navigate('/SocialPage/RecetteDetail/:id')}>Detail</button> */}
+    <button onClick={() => navigate(`/Profile/${recipes._id}`)}>PROFILE</button> 
+      
     </div>
   )
 }
