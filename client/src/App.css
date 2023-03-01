@@ -60,7 +60,7 @@ main{
     margin: 0 auto;
     border-radius: 10px 10px 0 0; 
 }
-.title, p{
+.titles, p{
     text-align: left;
     margin-left: 20px;
 }
@@ -79,9 +79,12 @@ main{
         margin-top: 40px;
     }
     .ingrediente {
-        
         text-align: justify;
         margin-left: 30px;
+    }
+    .titles, p{
+        text-align: left;
+        margin-left: 20px;
     }
 }
 

@@ -69,7 +69,7 @@ function RecetteDetail() {
           <div >
               <img className='imag-detail' src={require('../assets/mock.png')} alt="comida.png" />
           </div>
-          <div className='title'>
+          <div className='titles'>
               <h1 key={recipe?._id}>
                       {recipe?.title}</h1>
               <p>{recipe?.tags}</p>
