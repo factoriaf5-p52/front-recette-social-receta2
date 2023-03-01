@@ -73,7 +73,7 @@ Start the server and the client:
 - User profile
 - Post recipe
 
-<p>User must be logged in via email + password in order to do most of the CRUD requests. See [security](https://www.google.com).</p>
+<p>User must be logged in via email + password in order to do most of the CRUD requests.</p>
 <p>The requests can be found in the "api" folder.</p>
 <p>To update the favicon visit the file in the browser (by default it will be at localhost:3000/favicon.ico).</p>
 <h3>Server</h3>
