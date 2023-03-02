@@ -22,7 +22,7 @@ function RecetteForm() {
       <h1 className='nueva'>Nueva Receta</h1>
       <Formik 
         initialValues={{
-          _id:'',
+          // _id:'',
           title: '',
           description: '',
           author:{username:''},

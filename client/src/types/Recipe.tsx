@@ -25,7 +25,7 @@ type Author = {
 
 
   export type CrearRecipe = {
-    _id:string;
+    // _id:string;
     title: string;
     description: string;
     author:Author;
