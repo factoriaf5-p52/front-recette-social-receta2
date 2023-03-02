@@ -14,6 +14,7 @@ import RecetteDetail from './pages/RecetteDetail';
 import StatisticPage from './pages/StatisticPage';
 import Layout from './partials/Layout';
 import RecetteForm from './pages/RecetteForm';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -21,14 +22,13 @@ function App() {
     <Routes>
       <Route index element={<Home />} />
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
         <Route path='/social' element={<SocialPage />} />
-        <Route path='/statistic' element={<StatisticPage />} />
         <Route path='/recetteList' element={<RecetteListPage />} />
         <Route path='/recetteDetail/:id' element={<RecetteDetail />} />
         <Route path='/recetteForm' element={<RecetteForm />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile/:id' element={<Profile />} />
+        <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>
   );
