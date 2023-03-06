@@ -18,7 +18,7 @@ export const Navbar = ({user}:any) => {
 
         <li>
           
-          <Link to={'/profile/63d9049bee15be130124a938'}>
+          <Link to={'/profile/63fe44d17b61c4d103bb0eda'}>
             <img src={require('../assets/user.svg').default} alt="user-logo" />
           </Link>
         </li>

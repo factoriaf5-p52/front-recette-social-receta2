@@ -38,7 +38,7 @@ function Profile() {
     <>
     <div className='profile'>
 
-    <img src={require('../assets/profile.png')} alt="mock image" />
+    <img className='profile-img' src={require('../assets/profile.png')} alt="mock image" />
       <h1>Profile Picture  </h1>
       <div className='profile-h1'>
       <h3>{

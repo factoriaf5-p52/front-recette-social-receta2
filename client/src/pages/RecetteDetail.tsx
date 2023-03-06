@@ -77,7 +77,7 @@ function RecetteDetail() {
               <p>{recipe?.author.username}</p>
               <p>{recipe?.time}</p>
           </div>
-          <div>      
+          <div className='titles'>      
               {recipe?.comments.map((comment:Comment, index:number)=>
               <div key={index}>
                     <p>{comment.title}</p>

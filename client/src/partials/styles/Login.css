@@ -61,3 +61,13 @@ button:hover{
     align-self: flex-end;
     padding: 0 15px;
 }
+
+@media (min-width: 400px){
+    .login-main{
+        margin-top: 150px;
+        width: 500px;
+        height: 400px;
+        border: #B0E7CA solid 4px;
+        border-radius: 20px;
+    }
+}
