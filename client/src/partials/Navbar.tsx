@@ -1,10 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './styles/Navbar.css';
+import { Link } from 'react-router-dom'
+import RecetteDetail from '../pages/RecetteDetail'
+import ProfileCard from './ProfileCard'
+import RecetteCard from './RecetteCard'
+import './styles/Navbar.css'
 
 type Props = {}
 
-const Navbar = (props: Props) => {
+export const Navbar = ({user}:any) => {
   return (
     <div className="navbar">
       <ul>
@@ -15,13 +17,14 @@ const Navbar = (props: Props) => {
         </li>
 
         <li>
-          <Link to={'/profile'}>
+          
+          <Link to={'/profile/63fe44d17b61c4d103bb0eda'}>
             <img src={require('../assets/user.svg').default} alt="user-logo" />
           </Link>
         </li>
 
         <li>
-        <Link to={'/login'}>
+        <Link to={'/login/'}>
           login
           {/* <img src={require('../assets/fav.svg').default} alt="fav-logo" /> */}
         </Link>  
@@ -38,8 +41,15 @@ const Navbar = (props: Props) => {
             <img src={require('../assets/add.svg').default} alt="add-logo" />
           </Link>
         </li>
+        <li>
+          
+        </li>
+
 
       </ul>
+
+      
+      
     </div>
   )
 }

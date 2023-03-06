@@ -13,19 +13,19 @@ type Author = {
   }
   
   export type Recipe = {
-    _id:string;
+    _id: string;
     title: string;
     description: string;
-    author:Author;
-    time:string 
-    tags: Array<any>;
-    comments: Comment[];
-    ingredients:Ingredient[] 
-  }
+    ingredients: string[];
+    time: number;
+    is_private: boolean;
+    tags: string[];
+    comments: string[];
+}
 
 
   export type CrearRecipe = {
-    _id:string;
+    // _id:string;
     title: string;
     description: string;
     author:Author;

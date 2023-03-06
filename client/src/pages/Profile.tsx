@@ -1,40 +1,53 @@
 import { type } from 'os'
 import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { getUserRequest } from '../api/profile.api'
 import { getUsersRequest } from '../api/users.api'
 import Layout from '../partials/Layout'
+import ProfileCard from '../partials/ProfileCard'
+import RecetteDetail from './RecetteDetail'
+import RecetteListPage from './RecetteList'
+import SocialPage from './SocialPage'
 
-type Props = {
+type User = {
   _id?: any;
   username: string;
+  password:string;
+  email:string;
+  shopping:Array<any>
 }
 
 function Profile() {
 
-  const [user, setUsers] = useState<Props[]>([])
+  const [user, setUsers] = useState<User>()
 
+  const params = useParams ()
+  console.log(params)
   useEffect(() => {
 
-    async function loadUsers() {
-      const response = await getUsersRequest()
-      setUsers(response.data)
-      console.log(response)
+    const loadUser = async () => {
+      const userProfile = await getUserRequest(params.id)
+      setUsers(userProfile.data)
+      console.log(userProfile)
     }
-    loadUsers()
+    loadUser()
 
   }, [])
 
   return (
     <>
-      <h1>Profile</h1>
-      {
-        user.map(users => (
-          <div key={users._id}>
-            <p>{users._id}</p>
-            <h3>{users.username}</h3>
-          </div>
-        ))
+    <div className='profile'>
+
+    <img className='profile-img' src={require('../assets/profile.png')} alt="mock image" />
+      <h1>Profile Picture  </h1>
+      <div className='profile-h1'>
+      <h3>{
+        user?.username
       }
-      <Layout />
+      </h3>
+      <h4>{user?.email}</h4>
+      </div>
+    </div>
     </>
   )
 }

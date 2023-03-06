@@ -26,6 +26,7 @@ let RecipesController = class RecipesController {
         this.recipesService = recipesService;
     }
     async create(createRecipeDto) {
+        console.log(createRecipeDto);
         return this.recipesService.create(createRecipeDto);
     }
     async findAll() {

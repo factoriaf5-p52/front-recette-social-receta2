@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Layout from '../partials/Layout'
+import ProfileCard from '../partials/ProfileCard'
 
 function Home() {
   return (

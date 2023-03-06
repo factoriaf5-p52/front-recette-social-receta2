@@ -24,6 +24,7 @@ export class RecipesController {
   @UseGuards(JwtAuthGuard)
   @Post()
   async create(@Body() createRecipeDto: CreateRecipeDto) {
+    console.log(createRecipeDto)
     return this.recipesService.create(createRecipeDto);
   }
 

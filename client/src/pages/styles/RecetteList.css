@@ -1,6 +1,17 @@
 .card-container{
     display: grid;
-    gap: 1rem;
-    grid-auto-rows: 10rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 2rem;
+    margin-top: 8rem;
+    margin-bottom: 100px;
+   
+    /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 400px){
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
 }

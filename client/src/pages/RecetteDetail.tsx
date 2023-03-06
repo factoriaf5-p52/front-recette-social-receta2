@@ -69,7 +69,7 @@ function RecetteDetail() {
           <div >
               <img className='imag-detail' src={require('../assets/mock.png')} alt="comida.png" />
           </div>
-          <div className='title'>
+          <div className='titles'>
               <h1 key={recipe?._id}>
                       {recipe?.title}</h1>
               <p>{recipe?.tags}</p>
@@ -77,7 +77,7 @@ function RecetteDetail() {
               <p>{recipe?.author.username}</p>
               <p>{recipe?.time}</p>
           </div>
-          <div>      
+          <div className='titles'>      
               {recipe?.comments.map((comment:Comment, index:number)=>
               <div key={index}>
                     <p>{comment.title}</p>

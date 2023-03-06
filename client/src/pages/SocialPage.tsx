@@ -36,11 +36,13 @@ function SocialPage() {
       <div className='social'>
         {
           recipes.map(recipe => (
-            <div >
+            <div className='social2'>
               <h2 className='title-social'>{recipe.title}</h2>
-              <img src={require('../assets/mock.png')} alt="mock image" />
+              <div className='social-img'>
+                <img className='social-img' src={require('../assets/mock.png')} alt="mock image" />
+              </div>
 
-              <RecetteCard recipes={recipe} />
+              {/* <RecetteCard recipes={recipe} /> */}
 
             </div>
           ))
