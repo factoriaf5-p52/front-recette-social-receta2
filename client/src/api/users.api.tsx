@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const baseUserUrl = ('http://localhost:4000/api/v1/users')
+const baseUserUrl = ('https://server-reoobot.vercel.app/api/v1/users')
 
 const loginUrl = ("http://localhost:4000/api/v1/auth/login")
 
