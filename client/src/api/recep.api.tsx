@@ -3,7 +3,7 @@ import { CrearRecipe } from '../types/Recipe'
 
 
 
-const baseRecipeUrl = 'http://localhost:4000/api/v1/recipes'
+const baseRecipeUrl = 'https://server-reoobot.vercel.app/api/v1/recipes'
 
 // ----------SHOULD ALL------------//
 
